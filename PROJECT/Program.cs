@@ -60,3 +60,6 @@ string[] SelectNewArr(string[] array, int charLimit)
     }
     return resultArray;
 }
+
+string [] initArray = InitializeArray();
+Console.WriteLine($"Результирующий массив: [{String.Join("; ", SelectNewArr (initArray, 3))}]");
