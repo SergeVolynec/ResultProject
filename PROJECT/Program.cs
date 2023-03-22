@@ -36,3 +36,27 @@ int DefineNewSize(string[] arr, int charQuantity)
     }
     return resultSize;
 }
+
+/// <summary>
+/// Создает новый массив из первоначального, оставляя только элементы нужной длины 
+/// </summary>
+/// <param name="array">Первоначальный массив</param>
+/// <param name="charLimit">Ограничение по длине элемента массива</param>
+/// <returns>Новый массив с элементами только нужной длины</returns>
+string[] SelectNewArr(string[] array, int charLimit)
+{
+    int initSize = array.Length;
+    int newSize = DefineNewSize(array, charLimit);
+    string[] resultArray = new string[newSize];
+    int count = 0;
+
+    for (int i = 0; i < initSize; i++)
+    {
+        if (array[i].Length <= charLimit)
+        {
+            resultArray[count] = array[i];
+            count++;
+        }
+    }
+    return resultArray;
+}
