@@ -17,3 +17,22 @@ string[] InitializeArray()
     return initArray;
 }
 
+/// <summary>
+/// Определяет количество элементов массива, длина которых менее заданного числа
+/// </summary>
+/// <param name="arr">Проверяемый массив</param>
+/// <param name="charQuantity">Ограничение длины строки</param>
+/// <returns>Количество элементов массива</returns>
+int DefineNewSize(string[] arr, int charQuantity)
+{
+    int resultSize = 0;
+    int initSize = arr.Length;
+    for (int i = 0; i < initSize; i++)
+    {
+        if (arr[i].Length <= charQuantity)
+        {
+            resultSize++;
+        }
+    }
+    return resultSize;
+}
